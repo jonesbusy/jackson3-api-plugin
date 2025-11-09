@@ -23,11 +23,11 @@ class JSONMapperTest {
             // language=json
             String content =
                     """
-                    {
-                      "bar": {
-                          "id": "123"
-                    }
-                    }""";
+                            {
+                              "bar": {
+                                  "id": "123"
+                            }
+                            }""";
             Foo foo = mapper.readValue(content.getBytes(StandardCharsets.UTF_8), Foo.class);
             assertNotNull(foo.getBar());
             assertEquals("123", foo.getBar().getId());
